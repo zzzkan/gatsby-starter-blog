@@ -38,6 +38,7 @@ const config: GatsbyConfig = {
         ],
       },
     },
+    "gatsby-plugin-sitemap",
   ],
 }
 
