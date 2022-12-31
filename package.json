@@ -20,6 +20,7 @@
   "dependencies": {
     "@zzzkan/gatsby-theme-blog": "^0.2.0",
     "gatsby": "^5.3.3",
+    "gatsby-plugin-manifest": "^5.3.1",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sitemap": "^6.3.1",
     "react": "^18.2.0",

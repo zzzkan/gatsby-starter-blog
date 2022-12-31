@@ -40,6 +40,17 @@ const config: GatsbyConfig = {
     },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-robots-txt",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "zzzkan-blog - @zzzkan/gatsby-starter-blog",
+        short_name: "zzzkan-blog",
+        start_url: "/",
+        background_color: "#fff",
+        display: "minimal-ui",
+        icon: "contents/images/icon.png",
+      },
+    },
   ],
 }
 
