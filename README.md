@@ -21,7 +21,7 @@
 - MDX
 - [Chakra UI](https://github.com/chakra-ui/chakra-ui) theming
 - Light mode / Dark mode
-- Code highlighting with [Rehype Pretty Code](https://rehype-pretty-code.netlify.app/)
+- Code highlighting with [Shiki](https://github.com/shikijs/shiki)
 - Tags
 - Related posts based on simple tag matching
 - Psagination
