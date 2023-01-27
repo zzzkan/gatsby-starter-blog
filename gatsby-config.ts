@@ -10,6 +10,7 @@ const config: GatsbyConfig = {
     imageUrl: "https://zzzkan-gatsby-starter-blog.netlify.app/banner.png",
   },
   graphqlTypegen: true,
+  trailingSlash: "always",
   plugins: [
     {
       resolve: "@zzzkan/gatsby-theme-blog",
