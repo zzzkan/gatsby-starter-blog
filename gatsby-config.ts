@@ -82,7 +82,7 @@ const config: GatsbyConfig = {
                 ).replace(/\/\/+/g, "/");
                 return {
                   title: post.title,
-                  date: post.updatedDate,
+                  date: post.publishedDate,
                   description: post.excerpt,
                   url,
                   guid: url,
@@ -90,11 +90,11 @@ const config: GatsbyConfig = {
               }),
             query: `
               {
-                allPost(sort: {updatedDate: DESC}) {
+                allPost(sort: {publishedDate: DESC}) {
                   nodes {
                     slug
                     title
-                    updatedDate
+                    publishedDate
                     excerpt
                   }
                 }
