@@ -44,8 +44,8 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "zzzkan-blog - @zzzkan/gatsby-starter-blog",
-        short_name: "zzzkan-blog",
+        name: "@zzzkan/gatsby-starter-blog",
+        short_name: "@zzzkan/gatsby-starter-blog",
         start_url: "/",
         background_color: "#fff",
         display: "minimal-ui",
@@ -75,14 +75,13 @@ const config: GatsbyConfig = {
               query: { site: Queries.Site; allPost: Queries.PostConnection };
             }) =>
               allPost.nodes.map((post) => {
-                const url = (
-                  site?.siteMetadata?.siteUrl +
-                  post.slug +
-                  "/"
-                ).replace(/\/\/+/g, "/");
+                const url = new URL(
+                  (post.slug + "/").replace(/\/\/+/g, "/"),
+                  site?.siteMetadata?.siteUrl ?? ""
+                ).href;
                 return {
                   title: post.title,
-                  date: post.publishedDate,
+                  date: post.updatedDate ?? post.publishedDate,
                   description: post.excerpt,
                   url,
                   guid: url,
@@ -95,13 +94,16 @@ const config: GatsbyConfig = {
                     slug
                     title
                     publishedDate
+                    updatedDate
                     excerpt
                   }
                 }
               }
             `,
             output: "/rss.xml",
-            title: "RSS Feed",
+            title: "RSS Feed - @zzzkan/gatsby-starter-blog",
+            feed_url: "https://zzzkan-gatsby-starter-blog.netlify.app/rss.xml",
+            site_url: "https://zzzkan-gatsby-starter-blog.netlify.app/",
           },
         ],
       },
