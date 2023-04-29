@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
           },
           {
             name: "GitHub",
-            url: "https://github.com/zzzkan",
+            url: "https://github.com/zzzkan/gatsby-starter-blog",
           },
           {
             name: "Twitter",
