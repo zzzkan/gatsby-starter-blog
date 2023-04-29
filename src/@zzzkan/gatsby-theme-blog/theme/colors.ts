@@ -1,5 +1,5 @@
 const colors = {
-  tint: { default: "red.700", _dark: "red.200" },
+  tint: { default: "blue.700", _dark: "blue.200" },
   primaryText: { default: "gray.800", _dark: "gray.100" },
   secondaryText: { default: "gray.600", _dark: "gray.400" },
   onTintText: { default: "white", _dark: "gray.900" },
